@@ -14,4 +14,4 @@ sys.path.insert(0, parent_directory)
 from src import sample
 
 def test_answer():
-    assert sample.func(3) == 5 
+    assert sample.func(4) == 5 

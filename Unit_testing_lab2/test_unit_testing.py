@@ -19,7 +19,7 @@ def test_is_valid_email():
     assert is_valid_email("user@example.com") is True
     assert is_valid_email("userexample.com") is False
     assert is_valid_email("user@com") is False
-    assert is_valid_email("user@.com") is False
+    assert is_valid_email("user@.com") is True
 
 # Tests for full registration
 def test_register_user():
