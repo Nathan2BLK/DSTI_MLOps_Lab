@@ -1,0 +1,11 @@
+FROM continuumio/miniconda3
+
+COPY main.py /app/main.py
+COPY model_files /app/model_files
+COPY requirements.txt /app/requirements.txt
+
+WORKDIR /app
+
+RUN pip install -r requirements.txt
+
+ENTRYPOINT ["gunicorn", "--bind=0.0.0.0:9696", "main:app"]
